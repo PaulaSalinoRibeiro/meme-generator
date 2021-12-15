@@ -41,4 +41,37 @@ function loadFile(){                           // ref.: https://www.codegrepper.
     let img = document.createElement('img');
     memeImage.appendChild(img);
     img.src = URL.createObjectURL(memeInsert.files[0]); 
+    /* img.change = function(){
+        URL.revokeObjectURL(img.src)
+    } */
 } 
+
+let fireButton = document.createElement('button');
+fireButton.id = 'fire';
+fireButton.innerText = 'Fire';
+body.appendChild(fireButton);
+
+let waterButton = document.createElement('button');
+waterButton.id = 'water';
+waterButton.innerText = 'Water';
+body.appendChild(waterButton);
+
+let earthButton = document.createElement('button');
+earthButton.id = 'earth';
+earthButton.innerText = 'Earth';
+body.appendChild(earthButton);
+
+fireButton.addEventListener('click', styleFire);
+function styleFire(){
+    container.style.border = '3px dashed red'
+}
+
+waterButton.addEventListener('click', styleWater);
+function styleWater(){
+    container.style.border = '5px double blue'
+}
+
+earthButton.addEventListener('click', styleEarth);
+function styleEarth(){
+    container.style.border = '6px groove green'
+}

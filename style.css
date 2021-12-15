@@ -1,0 +1,18 @@
+/*   #meme-image{
+    background-color: white;
+    border: 1px solid black;
+    margin: 0%;
+    z-index: 1;
+}  */
+
+/* #meme-text{
+    box-shadow: 5px 5px 5px black;  /* offset-x | offset-y | blur-radius | color */
+    font-size: 30px;
+    /* color: white; */
+    z-index: 0;
+} */
+
+/* #meme-image-container{
+    width: fit-content;
+    block-size: fit-content;
+}  */

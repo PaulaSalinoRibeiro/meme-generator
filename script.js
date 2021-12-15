@@ -1,9 +1,18 @@
 
-let memeText = document.getElementById('meme-text');
 let textInput = document.getElementById('text-input');
+textInput.addEventListener('keyup', printText);
+function printText(){
+    let memeText = document.getElementById('meme-text');
+    memeText.innerText = textInput.value; 
+}
 
-textInput.addEventListener('keyup', writting);
+let memeImage = document.getElementById('meme-image');
+let memeInsert = document.getElementById('meme-insert');
 
-function writting(){
-    memeText.innerText = textInput.value;  
+memeInsert.addEventListener('change', loadFile);
+
+function loadFile(event){                           // ref.: https://www.codegrepper.com/code-examples/javascript/display+image+upload+javascript
+    let img = document.createElement('img');
+    memeImage.appendChild(img);
+    img.src = URL.createObjectURL(event.target.files[0]);
 }

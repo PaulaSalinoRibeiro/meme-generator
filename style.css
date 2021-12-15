@@ -21,3 +21,18 @@
     border: 1px solid black;
 }  
 
+#meme-1, #meme-2, #meme-3, #meme-4{
+    width: 250px;
+}
+
+#fire{
+    background-color: red;
+}
+
+#water{
+    background-color: blue;
+}
+
+#earth{
+    background-color: green;
+}

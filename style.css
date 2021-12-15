@@ -1,18 +1,22 @@
-/*   #meme-image{
+#meme-image{
     background-color: white;
     border: 1px solid black;
     margin: 0%;
     z-index: 1;
-}  */
+}  
 
-/* #meme-text{
-    box-shadow: 5px 5px 5px black;  /* offset-x | offset-y | blur-radius | color */
+#meme-text{
+    text-shadow: 5px 5px 5px black;  /* offset-x | offset-y | blur-radius | color */
     font-size: 30px;
-    /* color: white; */
+    color: white; 
     z-index: 0;
-} */
+    position: absolute;
+    border: 1px solid black;
+} 
 
-/* #meme-image-container{
+#meme-image-container{
     width: fit-content;
     block-size: fit-content;
-}  */
+    background-color: white;
+    border: 1px solid black;
+}  

@@ -1,25 +1,26 @@
 #meme-image{
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid black; 
     margin: 0%;
-    z-index: 1;
+    z-index: 1; 
+    width: 600px;
+    height: 600px;
+    
 }  
 
 #meme-text{
     text-shadow: 5px 5px 5px black;  /* offset-x | offset-y | blur-radius | color */
     font-size: 30px;
     color: white; 
-    z-index: 0;
-    position: absolute;
-    border: 1px solid black;
+    z-index: 0; 
+    position: absolute;    
 } 
 
 #meme-image-container{
-    width: fit-content; 
+    width: fit-content;
     block-size: fit-content;
     background-color: white;
     border: 1px solid black;
-    
 }  
 
 #meme-1, #meme-2, #meme-3, #meme-4{

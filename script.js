@@ -17,13 +17,13 @@ let container = document.createElement('div');
 container.id = 'meme-image-container';
 body.appendChild(container);
 
-let divParagraph = document.createElement('div');
+/* let divParagraph = document.createElement('div');
 container.appendChild(divParagraph);
-divParagraph.id = 'conteiner-paragraph'
+divParagraph.id = 'conteiner-paragraph' */
 
-let paragraph = document.createElement('p');
+let paragraph = document.createElement('div');
 paragraph.id = 'meme-text';
-divParagraph.appendChild(paragraph);
+container.appendChild(paragraph);
 
 let image =document.createElement('img');
 image.id = 'meme-image';

@@ -17,9 +17,13 @@ let container = document.createElement('div');
 container.id = 'meme-image-container';
 body.appendChild(container);
 
+let divParagraph = document.createElement('div');
+container.appendChild(divParagraph);
+divParagraph.id = 'conteiner-paragraph'
+
 let paragraph = document.createElement('p');
 paragraph.id = 'meme-text';
-container.appendChild(paragraph);
+divParagraph.appendChild(paragraph);
 
 let image =document.createElement('img');
 image.id = 'meme-image';
@@ -100,7 +104,7 @@ meme3.addEventListener('click', addMeme);
 meme4.addEventListener('click', addMeme);
 
 function addMeme(event){
-    let img = event.target.getAttribute('src');
+    let img = event.target.getAttribute('src'); // ref.: https://www.codegrepper.com/code-examples/javascript/javascript+how+to+get+image+src
     //console.log(img);
     memeImage.src = img;
 

@@ -15,10 +15,11 @@
 } 
 
 #meme-image-container{
-    width: fit-content;
+    width: fit-content; 
     block-size: fit-content;
     background-color: white;
     border: 1px solid black;
+    
 }  
 
 #meme-1, #meme-2, #meme-3, #meme-4{

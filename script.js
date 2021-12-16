@@ -17,13 +17,13 @@ let container = document.createElement('div');
 container.id = 'meme-image-container';
 body.appendChild(container);
 
-let textDiv = document.createElement('div');
-textDiv.id = 'meme-text';
-container.appendChild(textDiv);
+let paragraph = document.createElement('p');
+paragraph.id = 'meme-text';
+container.appendChild(paragraph);
 
-let imageDiv =document.createElement('div');
-imageDiv.id = 'meme-image';
-container.appendChild(imageDiv);
+let image =document.createElement('img');
+image.id = 'meme-image';
+container.appendChild(image);
 
 let textInput = document.getElementById('text-input');
 textInput.addEventListener('keyup', printText);
@@ -38,12 +38,7 @@ let memeInsert = document.getElementById('meme-insert');
 memeInsert.addEventListener('change', loadFile);
 
 function loadFile(){                           // ref.: https://www.codegrepper.com/code-examples/javascript/display+image+upload+javascript
-    let img = document.createElement('img');
-    memeImage.appendChild(img);
-    img.src = URL.createObjectURL(memeInsert.files[0]); 
-    /* img.change = function(){
-        URL.revokeObjectURL(img.src)
-    } */
+    memeImage.src = URL.createObjectURL(memeInsert.files[0]); 
 } 
 
 let fireButton = document.createElement('button');
@@ -99,34 +94,14 @@ meme4.id = 'meme-4';
 meme4.src = '/imgs/meme4.png';
 divMemes.appendChild(meme4);
 
-meme1.addEventListener('click', addMeme1);
+meme1.addEventListener('click', addMeme);
+meme2.addEventListener('click', addMeme);
+meme3.addEventListener('click', addMeme);
+meme4.addEventListener('click', addMeme);
 
-function addMeme1(){
-    let img = document.createElement('img');
-    memeImage.appendChild(img);
-    img.src = '/imgs/meme1.png'
-}
+function addMeme(event){
+    let img = event.target.getAttribute('src');
+    //console.log(img);
+    memeImage.src = img;
 
-meme2.addEventListener('click', addMeme2);
-
-function addMeme2(){
-    let img = document.createElement('img');
-    memeImage.appendChild(img);
-    img.src = '/imgs/meme2.png'
-}
-
-meme3.addEventListener('click', addMeme3);
-
-function addMeme3(){
-    let img = document.createElement('img');
-    memeImage.appendChild(img);
-    img.src = '/imgs/meme3.png'
-}
-
-meme4.addEventListener('click', addMeme4);
-
-function addMeme4(){
-    let img = document.createElement('img');
-    memeImage.appendChild(img);
-    img.src = '/imgs/meme4.png'
 }
